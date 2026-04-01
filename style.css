@@ -398,13 +398,15 @@ section { padding: 5rem 6%; }
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--primary);
-  color: var(--white);
-  padding: 0.2rem 1rem;
+  background: linear-gradient(135deg, #f59e0b, #ef4444, #ec4899);
+  color: #fff;
+  padding: 0.25rem 1.1rem;
   border-radius: 20px;
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   white-space: nowrap;
+  box-shadow: 0 3px 12px rgba(239,68,68,0.4);
+  letter-spacing: 0.03em;
 }
 
 .popular-badge-warm { background: #c56b1f; }
