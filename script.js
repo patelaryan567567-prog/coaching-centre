@@ -21,8 +21,7 @@ dropdownClose.addEventListener('click', closeMenu);
 
 // ── DARK MODE ──
 const darkToggle = document.getElementById('darkToggle');
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') { document.body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i>'; }
+darkToggle.innerHTML = '<i class="fas fa-moon"></i>';
 darkToggle.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
   const isDark = document.body.classList.contains('dark-mode');

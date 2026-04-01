@@ -1100,15 +1100,20 @@ section { padding: 5rem 6%; }
   font-weight: 700;
   font-size: 0.78rem;
   letter-spacing: 0.03em;
+  z-index: 1;
+}
+.ticker-track {
+  overflow: hidden;
+  flex: 1;
 }
 .ticker-content {
   display: flex;
-  gap: 3rem;
-  animation: ticker 30s linear infinite;
+  gap: 4rem;
+  animation: ticker 28s linear infinite;
   white-space: nowrap;
-  padding-left: 2rem;
+  width: max-content;
 }
-.ticker-content span { opacity: 0.95; }
+.ticker-content span { opacity: 0.95; padding-right: 1rem; }
 @keyframes ticker {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
