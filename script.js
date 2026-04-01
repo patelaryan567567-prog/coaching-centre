@@ -1,9 +1,70 @@
 // Mobile menu toggle
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
-
 hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// ── DARK MODE ──
+const darkToggle = document.getElementById('darkToggle');
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') { document.body.classList.add('dark-mode'); darkToggle.innerHTML = '<i class="fas fa-sun"></i>'; }
+darkToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  darkToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+// ── BACK TO TOP ──
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTop.classList.toggle('show', window.scrollY > 400);
+  document.querySelector('.navbar').style.boxShadow =
+    window.scrollY > 10 ? '0 4px 20px rgba(0,0,0,0.12)' : '0 2px 12px rgba(0,0,0,0.07)';
+});
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ── TOPPERS FILTER ──
+function filterToppers(cat, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.topper-card').forEach(card => {
+    card.classList.toggle('hidden', cat !== 'all' && card.dataset.cat !== cat);
+  });
+}
+
+// ── FAQ ACCORDION ──
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+  if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+}
+
+// ── FEE CALCULATOR ──
+const feeData = {
+  jee:        { name: 'JEE Preparation',      monthly: 8500,  '1yr': 90000,  '2yr': 160000, monthly_full: 102000, '1yr_full': 102000, '2yr_full': 204000 },
+  neet:       { name: 'NEET Preparation',     monthly: 7500,  '1yr': 80000,  '2yr': 145000, monthly_full: 90000,  '1yr_full': 90000,  '2yr_full': 180000 },
+  foundation: { name: 'Class 6–10 Foundation', monthly: 3500,  '1yr': 38000,  '2yr': null,   monthly_full: 42000,  '1yr_full': 42000,  '2yr_full': null   },
+  upsc:       { name: 'UPSC Civil Services',  monthly: 12000, '1yr': 130000, '2yr': 240000, monthly_full: 144000, '1yr_full': 144000, '2yr_full': 288000 },
+};
+
+function calculateFee() {
+  const course = document.getElementById('calcCourse').value;
+  const duration = document.getElementById('calcDuration').value;
+  const d = feeData[course];
+  const fee = d[duration];
+  if (!fee) { alert('This duration is not available for the selected course.'); return; }
+  const fullPrice = d[duration + '_full'] || fee;
+  const saving = fullPrice - fee;
+  const durationLabel = { monthly: 'Monthly', '1yr': '1 Year', '2yr': '2 Years' }[duration];
+  document.getElementById('crCourse').textContent = d.name;
+  document.getElementById('crDuration').textContent = durationLabel;
+  document.getElementById('crFee').textContent = '₹' + fee.toLocaleString('en-IN');
+  document.getElementById('crSave').textContent = saving > 0 ? 'Save ₹' + saving.toLocaleString('en-IN') : 'No extra saving';
+  document.getElementById('calcResult').classList.add('show');
+}
 
 // ── COURSE DATA ──
 // Cartoon pics: DiceBear adventurer style — clean illustrated faces

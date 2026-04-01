@@ -8,24 +8,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
+<body class="light-mode">
+
+  <!-- ANNOUNCEMENT TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-label"><i class="fas fa-bullhorn"></i> Notice</div>
+    <div class="ticker-content">
+      <span>🎉 New UPSC batch starting 1st August 2025 — Limited seats!</span>
+      <span>📢 JEE 2025 Results: 45 students selected from BrightPath!</span>
+      <span>🏆 NEET 2025: 38 selections including 3 AIR under 1000!</span>
+      <span>📚 Free demo class every Saturday 10 AM — Register now!</span>
+      <span>🎓 Admission open for Class 6–10 Foundation batch 2025–26</span>
+    </div>
+  </div>
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <div class="nav-brand">
-      <i class="fas fa-graduation-cap"></i> BrightPath
-    </div>
+    <div class="nav-brand"><i class="fas fa-graduation-cap"></i> BrightPath</div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#features">Why Us</a></li>
       <li><a href="#courses">Courses</a></li>
+      <li><a href="#toppers">Toppers</a></li>
       <li><a href="#testimonials">Reviews</a></li>
       <li><a href="#faculty">Faculty</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact" class="btn-nav">Contact Us</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <i class="fas fa-bars"></i>
-    </button>
+    <div class="nav-right">
+      <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -191,6 +204,110 @@
     </div>
     <div class="cp-body" id="cpBody"></div>
   </div>
+
+  <!-- TOPPERS -->
+  <section class="toppers" id="toppers">
+    <div class="section-header">
+      <h2>Our <span class="highlight">Star Toppers</span></h2>
+      <p>Real students, real results — proof that hard work pays off.</p>
+    </div>
+    <div class="toppers-tabs">
+      <button class="tab-btn active" onclick="filterToppers('all',this)">All</button>
+      <button class="tab-btn" onclick="filterToppers('jee',this)">JEE</button>
+      <button class="tab-btn" onclick="filterToppers('neet',this)">NEET</button>
+      <button class="tab-btn" onclick="filterToppers('upsc',this)">UPSC</button>
+      <button class="tab-btn" onclick="filterToppers('board',this)">Board</button>
+    </div>
+    <div class="toppers-grid" id="toppersGrid">
+      <div class="topper-card" data-cat="jee">
+        <div class="topper-rank">AIR 247</div>
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=RahulS&backgroundColor=b6e3f4&skinColor=brown" alt="Rahul" />
+        <h4>Rahul Sharma</h4>
+        <span class="topper-exam">JEE Advanced 2024</span>
+        <span class="topper-score">Score: 312/360</span>
+        <p>"BrightPath's DPP sheets and mock tests were the key to my success!"</p>
+      </div>
+      <div class="topper-card" data-cat="neet">
+        <div class="topper-rank">AIR 412</div>
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=PriyaP&backgroundColor=ffd5dc&skinColor=light" alt="Priya" />
+        <h4>Priya Patel</h4>
+        <span class="topper-exam">NEET 2024</span>
+        <span class="topper-score">Score: 680/720</span>
+        <p>"Mrs. Priya Sharma's biology classes are unmatched. Got into AIIMS!"</p>
+      </div>
+      <div class="topper-card" data-cat="upsc">
+        <div class="topper-rank">AIR 89</div>
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=AmitK&backgroundColor=c0aede&skinColor=brown" alt="Amit" />
+        <h4>Amit Khanna</h4>
+        <span class="topper-exam">UPSC CSE 2023</span>
+        <span class="topper-score">IPS Selected</span>
+        <p>"Mr. Arjun Mishra's mock interviews prepared me for the real thing!"</p>
+      </div>
+      <div class="topper-card" data-cat="jee">
+        <div class="topper-rank">97.8%ile</div>
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=SnehaR&backgroundColor=d1f7c4&skinColor=light" alt="Sneha" />
+        <h4>Sneha Rao</h4>
+        <span class="topper-exam">JEE Mains 2024</span>
+        <span class="topper-score">Score: 285/300</span>
+        <p>"The small batch size meant I got personal attention every class."</p>
+      </div>
+      <div class="topper-card" data-cat="board">
+        <div class="topper-rank">98.6%</div>
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=KaranM&backgroundColor=ffeaa7&skinColor=brown" alt="Karan" />
+        <h4>Karan Mehta</h4>
+        <span class="topper-exam">CBSE Class 12 2024</span>
+        <span class="topper-score">PCM: 99/99/97</span>
+        <p>"Mr. Amit Verma's maths tricks saved me so much time in exams!"</p>
+      </div>
+      <div class="topper-card" data-cat="neet">
+        <div class="topper-rank">AIR 678</div>
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=AnanyaS&backgroundColor=e1bee7&skinColor=light" alt="Ananya" />
+        <h4>Ananya Singh</h4>
+        <span class="topper-exam">NEET 2024</span>
+        <span class="topper-score">Score: 665/720</span>
+        <p>"Joined as a dropper and cleared NEET in one year. Thank you BrightPath!"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEE CALCULATOR -->
+  <section class="calculator" id="calculator">
+    <div class="section-header">
+      <h2>Fee <span class="highlight">Calculator</span></h2>
+      <p>Select your course and duration to get instant fee details.</p>
+    </div>
+    <div class="calc-box">
+      <div class="calc-inputs">
+        <div class="calc-field">
+          <label>Select Course</label>
+          <select id="calcCourse">
+            <option value="jee">JEE Preparation</option>
+            <option value="neet">NEET Preparation</option>
+            <option value="foundation">Class 6–10 Foundation</option>
+            <option value="upsc">UPSC Civil Services</option>
+          </select>
+        </div>
+        <div class="calc-field">
+          <label>Select Duration</label>
+          <select id="calcDuration">
+            <option value="monthly">Monthly</option>
+            <option value="1yr">1 Year</option>
+            <option value="2yr">2 Years</option>
+          </select>
+        </div>
+        <button class="btn-primary" onclick="calculateFee()"><i class="fas fa-calculator"></i> Calculate</button>
+      </div>
+      <div class="calc-result" id="calcResult">
+        <div class="calc-result-inner">
+          <div class="cr-item"><span>Course</span><strong id="crCourse">—</strong></div>
+          <div class="cr-item"><span>Duration</span><strong id="crDuration">—</strong></div>
+          <div class="cr-item highlight-item"><span>Total Fee</span><strong id="crFee">—</strong></div>
+          <div class="cr-item"><span>You Save</span><strong id="crSave" style="color:#16a34a;">—</strong></div>
+        </div>
+        <a href="#contact" class="btn-primary" style="margin-top:1rem;">Enquire Now <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
 
   <!-- FACULTY -->
   <section class="faculty" id="faculty">
@@ -402,6 +519,48 @@
     </div>
   </div>
 
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="section-header">
+      <h2>Frequently Asked <span class="highlight">Questions</span></h2>
+      <p>Everything you need to know before joining BrightPath.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>How do I enroll in a course?</span><i class="fas fa-plus"></i></button>
+        <div class="faq-a">Simply fill the contact form or call us at +91 98765 43210. Our team will guide you through admission, batch selection, and fee payment within 24 hours.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>Is there a free demo class?</span><i class="fas fa-plus"></i></button>
+        <div class="faq-a">Yes! Free demo every Saturday at 10 AM. You can also request a personal demo on any weekday. No commitment required.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>What is the batch size?</span><i class="fas fa-plus"></i></button>
+        <div class="faq-a">JEE: max 20, NEET: max 18, UPSC: max 15, Foundation: max 25 students. Small batches ensure personal attention from faculty.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>Are study materials included in the fee?</span><i class="fas fa-plus"></i></button>
+        <div class="faq-a">Yes — printed notes, DPP sheets, previous year papers, and chapter-wise booklets are all included. No extra charges.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>Do you offer EMI or installment options?</span><i class="fas fa-plus"></i></button>
+        <div class="faq-a">Yes, flexible payment options available — monthly, quarterly, or two installments for annual courses. Contact us to discuss.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>What if I miss a class?</span><i class="fas fa-plus"></i></button>
+        <div class="faq-a">Missed classes can be covered in the next available batch of the same topic. Notes and summaries are also provided for important topics.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>Is online mode available?</span><i class="fas fa-plus"></i></button>
+        <div class="faq-a">Currently offline classes only for best learning. However, doubt sessions and test series are available online for enrolled students.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)"><span>How are tests and results tracked?</span><i class="fas fa-plus"></i></button>
+        <div class="faq-a">Weekly chapter tests, monthly full-length mocks, and a detailed performance report shared with students and parents every month.</div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="section-header">
@@ -416,10 +575,18 @@
         <div class="info-item"><i class="fas fa-envelope"></i><span>info@brightpathcoaching.com</span></div>
         <div class="info-item"><i class="fas fa-clock"></i><span>Mon–Sat: 7:00 AM – 9:00 PM</span></div>
         <div class="social-links">
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-facebook"></i></a>
           <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.0!2d77.2090!3d28.6139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM2JzUwLjAiTiA3N8KwMTInMzIuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
+            width="100%" height="200" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="BrightPath Location">
+          </iframe>
+          <p class="map-note"><i class="fas fa-info-circle"></i> To show your exact location: Go to Google Maps → search your address → click Share → Embed a map → copy the iframe src and replace the src above.</p>
         </div>
       </div>
       <form class="contact-form" id="contactForm">
@@ -462,6 +629,14 @@
     </div>
     <p class="footer-copy">© 2025 BrightPath Coaching Center. All rights reserved.</p>
   </footer>
+
+  <!-- WHATSAPP FLOAT + BACK TO TOP -->
+  <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <button class="back-to-top" id="backToTop" title="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>
