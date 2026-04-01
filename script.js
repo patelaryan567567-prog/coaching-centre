@@ -693,7 +693,9 @@ function createFallbackAvatar(name) {
 
 function enhanceRemoteImages(scope = document.querySelectorAll('img[src^="http"]')) {
   scope.forEach((image) => {
-    image.loading = "lazy";
+    const rect = image.getBoundingClientRect();
+    const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
+    if (!inViewport) image.loading = "lazy";
     image.decoding = "async";
     image.referrerPolicy = "no-referrer";
 
