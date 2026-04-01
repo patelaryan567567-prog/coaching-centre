@@ -37,44 +37,147 @@ body {
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--primary);
-}
-
-.nav-brand i { margin-right: 6px; }
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  align-items: center;
-}
-
-.nav-links a {
   text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.nav-links a:hover { color: var(--primary); }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
 
 .btn-nav {
   background: var(--primary);
   color: var(--white) !important;
   padding: 0.5rem 1.2rem;
   border-radius: 8px;
-  transition: background 0.2s !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+  white-space: nowrap;
 }
+.btn-nav:hover { background: var(--primary-dark); }
 
-.btn-nav:hover { background: var(--primary-dark) !important; }
+.dark-toggle {
+  background: #f1f5f9;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.dark-toggle:hover { background: #e2e8f0; }
 
 .hamburger {
-  display: none;
-  background: none;
+  background: #f1f5f9;
   border: none;
-  font-size: 1.4rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  font-size: 1.1rem;
   cursor: pointer;
   color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
 }
+.hamburger:hover { background: #e2e8f0; }
+
+/* ── DROPDOWN MENU ── */
+.nav-dropdown {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 280px;
+  height: 100vh;
+  background: var(--white);
+  z-index: 500;
+  box-shadow: -4px 0 30px rgba(0,0,0,0.15);
+  transition: right 0.3s cubic-bezier(0.4,0,0.2,1);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.nav-dropdown.open { right: 0; }
+
+.dropdown-close {
+  align-self: flex-end;
+  background: #f1f5f9;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: background 0.2s;
+}
+.dropdown-close:hover { background: #e2e8f0; }
+
+.nav-dropdown ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.nav-dropdown ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.97rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-dropdown ul li a i {
+  width: 20px;
+  text-align: center;
+  color: var(--primary);
+  font-size: 0.95rem;
+}
+
+.nav-dropdown ul li a:hover {
+  background: #eef2ff;
+  color: var(--primary);
+}
+
+.nav-dropdown ul li:last-child a {
+  background: var(--primary);
+  color: #fff;
+  margin-top: 0.5rem;
+}
+.nav-dropdown ul li:last-child a i { color: #fff; }
+.nav-dropdown ul li:last-child a:hover { background: var(--primary-dark); }
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 499;
+  display: none;
+}
+.nav-overlay.show { display: block; }
 
 /* ── HERO ── */
 .hero {
@@ -1040,6 +1143,11 @@ body.dark-mode {
 body.dark-mode .navbar { background: #1e293b; }
 body.dark-mode .ticker-wrap { background: #3730a3; }
 body.dark-mode .dark-toggle { background: #334155; color: #fbbf24; }
+body.dark-mode .hamburger { background: #334155; color: #e2e8f0; }
+body.dark-mode .nav-dropdown { background: #1e293b; }
+body.dark-mode .nav-dropdown ul li a { color: #e2e8f0; }
+body.dark-mode .nav-dropdown ul li a:hover { background: #334155; }
+body.dark-mode .dropdown-close { background: #334155; color: #94a3b8; }
 body.dark-mode .nav-links a { color: #e2e8f0; }
 body.dark-mode .feature-card,
 body.dark-mode .topper-card,

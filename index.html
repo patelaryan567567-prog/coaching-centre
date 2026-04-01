@@ -10,6 +10,31 @@
 </head>
 <body class="light-mode">
 
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#home" class="nav-brand"><i class="fas fa-graduation-cap"></i> BrightPath</a>
+    <div class="nav-right">
+      <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+      <a href="#contact" class="btn-nav">Contact Us</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- DROPDOWN MENU -->
+  <div class="nav-dropdown" id="navDropdown">
+    <button class="dropdown-close" id="dropdownClose"><i class="fas fa-times"></i></button>
+    <ul>
+      <li><a href="#features" onclick="closeMenu()"><i class="fas fa-star"></i> Why Us</a></li>
+      <li><a href="#courses" onclick="closeMenu()"><i class="fas fa-book"></i> Courses</a></li>
+      <li><a href="#toppers" onclick="closeMenu()"><i class="fas fa-trophy"></i> Toppers</a></li>
+      <li><a href="#testimonials" onclick="closeMenu()"><i class="fas fa-comments"></i> Reviews</a></li>
+      <li><a href="#faculty" onclick="closeMenu()"><i class="fas fa-chalkboard-teacher"></i> Faculty</a></li>
+      <li><a href="#faq" onclick="closeMenu()"><i class="fas fa-question-circle"></i> FAQ</a></li>
+      <li><a href="#contact" onclick="closeMenu()"><i class="fas fa-phone"></i> Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
+
   <!-- ANNOUNCEMENT TICKER -->
   <div class="ticker-wrap">
     <div class="ticker-label"><i class="fas fa-bullhorn"></i> Notice</div>
@@ -21,25 +46,6 @@
       <span>🎓 Admission open for Class 6–10 Foundation batch 2025–26</span>
     </div>
   </div>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-brand"><i class="fas fa-graduation-cap"></i> BrightPath</div>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#features">Why Us</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="#toppers">Toppers</a></li>
-      <li><a href="#testimonials">Reviews</a></li>
-      <li><a href="#faculty">Faculty</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact" class="btn-nav">Contact Us</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
-    </div>
-  </nav>
 
   <!-- HERO -->
   <section class="hero" id="home">

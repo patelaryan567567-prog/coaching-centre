@@ -1,8 +1,23 @@
 // Mobile menu toggle
 const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
+const navDropdown = document.getElementById('navDropdown');
+const navOverlay = document.getElementById('navOverlay');
+const dropdownClose = document.getElementById('dropdownClose');
+
+function openMenu() {
+  navDropdown.classList.add('open');
+  navOverlay.classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMenu() {
+  navDropdown.classList.remove('open');
+  navOverlay.classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+hamburger.addEventListener('click', openMenu);
+dropdownClose.addEventListener('click', closeMenu);
 
 // ── DARK MODE ──
 const darkToggle = document.getElementById('darkToggle');
