@@ -766,11 +766,7 @@ section { padding: 5rem 6%; }
 
 .cp-cta p { color: var(--muted); margin-bottom: 1rem; font-size: 0.95rem; }
 
-@media (max-width: 600px) {
-  .cp-timings { grid-template-columns: 1fr; }
-  .cp-includes { grid-template-columns: 1fr; }
-  .cp-hero { height: 180px; }
-}
+
 
 /* ── FACULTY ── */
 .faculty { background: var(--bg); }
@@ -862,10 +858,7 @@ section { padding: 5rem 6%; }
   font-weight: 500;
 }
 
-@media (max-width: 480px) {
-  .faculty-card { flex-direction: column; align-items: center; text-align: center; }
-  .faculty-tags { justify-content: center; }
-}
+
 
 /* ── TESTIMONIALS ── */
 .testimonials { background: var(--white); }
@@ -1141,21 +1134,126 @@ section { padding: 5rem 6%; }
   padding-top: 1.5rem;
 }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 768px) {
-  .nav-links { display: none; flex-direction: column; position: absolute; top: 65px; left: 0; right: 0; background: var(--white); padding: 1.5rem 6%; box-shadow: 0 8px 20px rgba(0,0,0,0.1); gap: 1rem; }
-  .nav-links.open { display: flex; }
-  .hamburger { display: block; }
+/* ══════════════════════════════════════════
+   RESPONSIVE SYSTEM
+   Tablet : 481px – 900px
+   Mobile : ≤ 480px
+   ══════════════════════════════════════════ */
 
-  .hero { flex-direction: column; padding: 3rem 6%; min-height: auto; text-align: center; }
-  .hero-btns { justify-content: center; }
-  .hero-stats { justify-content: center; }
+/* ── TABLET (481px – 900px) ── */
+@media (min-width: 481px) and (max-width: 900px) {
+  section { padding: 3.5rem 5%; }
+  .navbar { padding: 0.9rem 5%; }
+  .nav-brand { font-size: 1.5rem; }
+  .btn-nav { display: none; }
+
+  .hero { flex-direction: column; padding: 3rem 5%; min-height: auto; text-align: center; }
+  .hero-content { max-width: 100%; }
+  .hero-btns { justify-content: center; flex-wrap: wrap; }
+  .hero-stats { justify-content: center; gap: 1.5rem; }
   .hero-image { display: none; }
 
-  .contact-wrapper { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .courses-grid { grid-template-columns: repeat(2, 1fr); }
+  .toppers-grid { grid-template-columns: repeat(3, 1fr); }
+  .faculty-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .footer-content { flex-direction: column; }
+  .contact-wrapper { grid-template-columns: 1fr; gap: 2rem; }
+  .form-row { grid-template-columns: 1fr 1fr; }
+  .contact-form { padding: 1.8rem; }
+
+  .footer { padding: 2.5rem 5% 1.2rem; }
+  .footer-content { flex-direction: column; gap: 1.5rem; }
+
+  .section-header { margin-bottom: 2.5rem; }
+
+  .calc-box { padding: 1.8rem; }
+  .calc-inputs { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .calc-result-inner { grid-template-columns: 1fr 1fr; }
+
+  .cp-timings { grid-template-columns: 1fr 1fr; }
+  .cp-includes { grid-template-columns: 1fr 1fr; }
+  .cp-stats { grid-template-columns: repeat(2, 1fr); }
+  .cp-content { padding: 2rem 5%; }
+
+  .modal-box { width: 92%; padding: 2rem; }
+
+  .ticker-label { font-size: 0.75rem; padding: 0 0.8rem; }
+}
+
+/* ── MOBILE (≤ 480px) ── */
+@media (max-width: 480px) {
+  section { padding: 2.5rem 4%; }
+  .navbar { padding: 0.7rem 4%; }
+  .nav-brand { font-size: 1.2rem; }
+  .btn-nav { display: none; }
+
+  .hero { flex-direction: column; padding: 2rem 4%; min-height: auto; text-align: center; }
+  .hero-content { max-width: 100%; }
+  .hero-content h1 { font-size: clamp(1.6rem, 7vw, 2rem); }
+  .hero-content p { font-size: 1rem; }
+  .hero-btns { flex-direction: column; align-items: center; gap: 0.8rem; margin-bottom: 2rem; }
+  .hero-btns .btn-primary,
+  .hero-btns .btn-secondary { width: 100%; justify-content: center; }
+  .hero-stats { justify-content: center; gap: 1rem; flex-wrap: wrap; }
+  .stat strong { font-size: 1.3rem; }
+  .hero-image { display: none; }
+
+  .section-header { margin-bottom: 1.8rem; }
+  .section-header p { font-size: 0.95rem; }
+
+  .features-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .feature-card { padding: 1.4rem; }
+
+  .courses-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .course-card-inner { padding: 1.2rem 1.2rem 1.2rem 1.5rem; }
+  .course-actions { flex-direction: column; gap: 0.6rem; }
+  .btn-course, .btn-details { width: 100%; }
+
+  .toppers-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .topper-card { padding: 1.2rem 0.8rem; }
+
+  .faculty-grid { grid-template-columns: 1fr; }
+  .faculty-card { flex-direction: column; align-items: center; text-align: center; padding: 1.4rem; }
+  .faculty-tags { justify-content: center; }
+
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonial-card { padding: 1.4rem; }
+
+  .contact-wrapper { grid-template-columns: 1fr; gap: 1.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form { padding: 1.2rem; }
+
+  .calc-box { padding: 1.2rem; }
+  .calc-inputs { grid-template-columns: 1fr; }
+  .calc-result-inner { grid-template-columns: 1fr; }
+
+  .footer { padding: 2rem 4% 1rem; }
+  .footer-content { flex-direction: column; gap: 1rem; }
+  .footer-links { gap: 0.8rem; flex-wrap: wrap; }
+  .footer-brand { font-size: 1.1rem; }
+
+  .modal-box { width: 96%; padding: 1.4rem; border-radius: 14px; }
+  .modal-box h3 { font-size: 1.1rem; }
+
+  .ticker-label { font-size: 0.68rem; padding: 0 0.5rem; gap: 0.2rem; }
+  .ticker-wrap { height: 32px; font-size: 0.78rem; }
+
+  .cp-navbar { padding: 0.8rem 4%; }
+  .cp-content { padding: 1.5rem 4%; gap: 1.5rem; }
+  .cp-stats { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  .cp-stat { padding: 1rem; }
+  .cp-timings { grid-template-columns: 1fr; }
+  .cp-includes { grid-template-columns: 1fr; }
+  .cp-hero { height: 160px; }
+  .cp-section { padding: 1.2rem; }
+
+  .whatsapp-float { width: 46px; height: 46px; font-size: 1.3rem; bottom: 4.5rem; right: 1rem; }
+  .back-to-top { width: 38px; height: 38px; font-size: 0.9rem; right: 1rem; bottom: 1rem; }
+
+  .faq-q { font-size: 0.9rem; padding: 0.9rem 1rem; }
+  .tab-btn { padding: 0.4rem 0.9rem; font-size: 0.82rem; }
 }
 
 /* ── ANNOUNCEMENT TICKER ── */
@@ -1642,7 +1740,4 @@ body.dark-mode .back-to-top { background: #4f46e5; }
 .back-to-top.show { display: flex; }
 .back-to-top:hover { background: var(--primary-dark); transform: translateY(-2px); }
 
-@media (max-width: 600px) {
-  .calc-inputs { grid-template-columns: 1fr; }
-  .calc-result-inner { grid-template-columns: 1fr; }
-}
+
