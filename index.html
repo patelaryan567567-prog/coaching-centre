@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrightPath Coaching Center</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <i class="fas fa-graduation-cap"></i> BrightPath
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Why Us</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#faculty">Faculty</a></li>
+      <li><a href="#contact" class="btn-nav">Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="badge">🏆 #1 Coaching Center in Your Area</span>
+      <h1>Unlock Your Child's <span class="highlight">Full Potential</span></h1>
+      <p>Expert coaching for Classes 6–12 | JEE | NEET | Board Exams. Small batches, personalized attention, proven results.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get Free Demo Class</a>
+        <a href="#courses" class="btn-secondary">Explore Courses</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>1200+</strong><span>Students</span></div>
+        <div class="stat"><strong>98%</strong><span>Pass Rate</span></div>
+        <div class="stat"><strong>15+</strong><span>Expert Faculty</span></div>
+        <div class="stat"><strong>8 Yrs</strong><span>Experience</span></div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="hero-card">
+        <i class="fas fa-star"></i>
+        <p>"My daughter scored 95% after joining BrightPath!"</p>
+        <span>— Parent, Class 12</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="section-header">
+      <h2>Why Choose <span class="highlight">BrightPath?</span></h2>
+      <p>We don't just teach — we build confidence and careers.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <h3>Expert Faculty</h3>
+        <p>IIT/NIT alumni with 10+ years of teaching experience in their subjects.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon"><i class="fas fa-users"></i></div>
+        <h3>Small Batches</h3>
+        <p>Max 20 students per batch to ensure every student gets personal attention.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon"><i class="fas fa-file-alt"></i></div>
+        <h3>Regular Tests</h3>
+        <p>Weekly tests and monthly mock exams to track progress and boost confidence.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon"><i class="fas fa-clock"></i></div>
+        <h3>Flexible Timings</h3>
+        <p>Morning, evening, and weekend batches to fit every student's schedule.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon"><i class="fas fa-book-open"></i></div>
+        <h3>Study Material</h3>
+        <p>Comprehensive notes, practice sheets, and previous year papers included.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon"><i class="fas fa-headset"></i></div>
+        <h3>Doubt Sessions</h3>
+        <p>Dedicated doubt-clearing sessions every week — no question left unanswered.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="courses" id="courses">
+    <div class="section-header">
+      <h2>Our <span class="highlight">Courses</span></h2>
+      <p>Structured programs designed for every academic goal.</p>
+    </div>
+    <div class="courses-grid">
+
+      <!-- JEE -->
+      <div class="course-card">
+        <div class="course-icon"><i class="fas fa-atom"></i></div>
+        <h3>JEE Preparation</h3>
+        <p class="course-desc">Physics, Chemistry & Maths for JEE Mains & Advanced with full syllabus coverage.</p>
+        <ul class="course-list">
+          <li><i class="fas fa-check"></i> 2-year & 1-year programs available</li>
+          <li><i class="fas fa-check"></i> Daily Practice Problems (DPP) sheets</li>
+          <li><i class="fas fa-check"></i> All India Mock Tests (monthly)</li>
+          <li><i class="fas fa-check"></i> Printed study material included</li>
+          <li><i class="fas fa-check"></i> Weekly doubt-clearing sessions</li>
+          <li><i class="fas fa-check"></i> Parent progress report (monthly)</li>
+        </ul>
+        <div class="course-actions">
+          <a href="#contact" class="btn-course">Enquire Now</a>
+          <button class="btn-details" onclick="openCourse('jee')">View Details <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- NEET -->
+      <div class="course-card featured">
+        <span class="popular-badge">Most Popular</span>
+        <div class="course-icon" style="background:#f5e6ff; color:#7b2d8b;"><i class="fas fa-dna"></i></div>
+        <h3>NEET Preparation</h3>
+        <p class="course-desc">Biology, Physics & Chemistry for NEET with NCERT-focused strategy and deep concept clarity.</p>
+        <ul class="course-list">
+          <li><i class="fas fa-check"></i> NCERT line-by-line complete coverage</li>
+          <li><i class="fas fa-check"></i> Chapter-wise tests every week</li>
+          <li><i class="fas fa-check"></i> Biology special doubt sessions</li>
+          <li><i class="fas fa-check"></i> Previous 10-year paper practice</li>
+          <li><i class="fas fa-check"></i> Printed notes + diagrams booklet</li>
+          <li><i class="fas fa-check"></i> Online test series access</li>
+        </ul>
+        <div class="course-actions">
+          <a href="#contact" class="btn-course">Enquire Now</a>
+          <button class="btn-details" onclick="openCourse('neet')">View Details <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- FOUNDATION -->
+      <div class="course-card">
+        <div class="course-icon" style="background:#e6f9f0; color:#145a32;"><i class="fas fa-calculator"></i></div>
+        <h3>Class 6–10 Foundation</h3>
+        <p class="course-desc">Strong foundation in Maths & Science for board exams, Olympiads and competitive exam prep.</p>
+        <ul class="course-list">
+          <li><i class="fas fa-check"></i> CBSE & State Board full coverage</li>
+          <li><i class="fas fa-check"></i> Olympiad training (NSO, IMO, NTSE)</li>
+          <li><i class="fas fa-check"></i> Concept-based learning approach</li>
+          <li><i class="fas fa-check"></i> Weekly class tests & assignments</li>
+          <li><i class="fas fa-check"></i> Homework & assignment checking</li>
+          <li><i class="fas fa-check"></i> Monthly parent-teacher meeting</li>
+        </ul>
+        <div class="course-actions">
+          <a href="#contact" class="btn-course">Enquire Now</a>
+          <button class="btn-details" onclick="openCourse('foundation')">View Details <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+      <!-- UPSC -->
+      <div class="course-card upsc-card">
+        <span class="popular-badge" style="background:#d97706;">New Batch</span>
+        <div class="course-icon" style="background:#fef3c7; color:#d97706;"><i class="fas fa-landmark"></i></div>
+        <h3>UPSC Civil Services</h3>
+        <p class="course-desc">Comprehensive IAS/IPS preparation covering Prelims, Mains & Interview with ex-IAS faculty guidance.</p>
+        <ul class="course-list">
+          <li><i class="fas fa-check"></i> Prelims + Mains + Interview prep</li>
+          <li><i class="fas fa-check"></i> GS Paper 1, 2, 3, 4 full coverage</li>
+          <li><i class="fas fa-check"></i> CSAT practice sessions</li>
+          <li><i class="fas fa-check"></i> Current Affairs daily discussion</li>
+          <li><i class="fas fa-check"></i> Answer writing practice (daily)</li>
+          <li><i class="fas fa-check"></i> Mock interviews by ex-IAS panel</li>
+        </ul>
+        <div class="course-actions">
+          <a href="#contact" class="btn-course">Enquire Now</a>
+          <button class="btn-details" onclick="openCourse('upsc')">View Details <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COURSE DETAIL PAGE OVERLAY -->
+  <div class="course-page" id="coursePage">
+    <div class="cp-navbar">
+      <button class="cp-back" id="cpBack"><i class="fas fa-arrow-left"></i> Back to Courses</button>
+      <span class="cp-brand"><i class="fas fa-graduation-cap"></i> BrightPath</span>
+    </div>
+    <div class="cp-body" id="cpBody"></div>
+  </div>
+
+  <!-- FACULTY -->
+  <section class="faculty" id="faculty">
+    <div class="section-header">
+      <h2>Meet Our <span class="highlight">Expert Faculty</span></h2>
+      <p>Experienced, passionate educators dedicated to your success.</p>
+    </div>
+    <div class="faculty-grid">
+
+      <!-- 1 -->
+      <div class="faculty-card">
+        <div class="faculty-img-wrap">
+          <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=RajeshKumar&backgroundColor=b6e3f4&hair=short01&eyes=variant01&skinColor=brown" alt="Rajesh Kumar" />
+        </div>
+        <div class="faculty-info">
+          <h3>Mr. Rajesh Kumar</h3>
+          <span class="faculty-subject"><i class="fas fa-atom"></i> Physics</span>
+          <p>B.Tech IIT Delhi | 12 yrs exp. JEE Advanced specialist in Mechanics & Electrostatics. 300+ JEE selections.</p>
+          <div class="faculty-tags"><span>JEE</span><span>NEET Physics</span><span>Class 11–12</span></div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="faculty-card">
+        <div class="faculty-img-wrap">
+          <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=PriyaSharma&backgroundColor=ffd5dc&hair=long01&eyes=variant02&skinColor=light" alt="Priya Sharma" />
+        </div>
+        <div class="faculty-info">
+          <h3>Mrs. Priya Sharma</h3>
+          <span class="faculty-subject"><i class="fas fa-dna"></i> Biology</span>
+          <p>M.Sc Botany, Gold Medalist | 9 yrs exp. NEET Biology expert with 200+ selections. NCERT line-by-line approach.</p>
+          <div class="faculty-tags"><span>NEET Biology</span><span>Class 11–12</span><span>Olympiad</span></div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="faculty-card">
+        <div class="faculty-img-wrap">
+          <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=AmitVerma&backgroundColor=c0aede&hair=short02&eyes=variant03&skinColor=brown" alt="Amit Verma" />
+        </div>
+        <div class="faculty-info">
+          <h3>Mr. Amit Verma</h3>
+          <span class="faculty-subject"><i class="fas fa-calculator"></i> Mathematics</span>
+          <p>M.Sc Maths, NIT Trichy | 14 yrs exp. Calculus, Algebra & Geometry specialist. 95% students score 90+ in boards.</p>
+          <div class="faculty-tags"><span>JEE Maths</span><span>Board Exams</span><span>Class 6–12</span></div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="faculty-card">
+        <div class="faculty-img-wrap">
+          <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=SunitaRao&backgroundColor=d1f7c4&hair=long02&eyes=variant04&skinColor=light" alt="Sunita Rao" />
+        </div>
+        <div class="faculty-info">
+          <h3>Mrs. Sunita Rao</h3>
+          <span class="faculty-subject"><i class="fas fa-flask"></i> Chemistry</span>
+          <p>M.Sc Chemistry, Pune University | 10 yrs exp. Organic & Inorganic expert for JEE & NEET. Famous for shortcut tricks.</p>
+          <div class="faculty-tags"><span>JEE Chemistry</span><span>NEET Chemistry</span><span>Class 11–12</span></div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="faculty-card">
+        <div class="faculty-img-wrap">
+          <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=VikramSingh&backgroundColor=ffeaa7&hair=short03&eyes=variant05&skinColor=brown" alt="Vikram Singh" />
+        </div>
+        <div class="faculty-info">
+          <h3>Mr. Vikram Singh</h3>
+          <span class="faculty-subject"><i class="fas fa-square-root-alt"></i> Science & Maths</span>
+          <p>B.Ed, M.Sc Physics | 8 yrs exp. Foundation batch specialist for Class 6–10. Activity-based learning approach.</p>
+          <div class="faculty-tags"><span>Class 6–10</span><span>CBSE Board</span><span>Olympiad</span></div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="faculty-card">
+        <div class="faculty-img-wrap">
+          <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=NehaMehta&backgroundColor=ffd3b6&hair=long03&eyes=variant06&skinColor=light" alt="Neha Mehta" />
+        </div>
+        <div class="faculty-info">
+          <h3>Ms. Neha Mehta</h3>
+          <span class="faculty-subject"><i class="fas fa-book"></i> English & SST</span>
+          <p>MA English, Delhi University | 7 yrs exp. Essay writing, grammar & Social Studies for board exams and UPSC.</p>
+          <div class="faculty-tags"><span>Class 6–10</span><span>UPSC Essay</span><span>Board Exams</span></div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="faculty-card">
+        <div class="faculty-img-wrap">
+          <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=ArjunMishra&backgroundColor=b0c4de&hair=short04&eyes=variant07&skinColor=brown" alt="Arjun Mishra" />
+        </div>
+        <div class="faculty-info">
+          <h3>Mr. Arjun Mishra</h3>
+          <span class="faculty-subject"><i class="fas fa-landmark"></i> GS & Polity</span>
+          <p>Ex-IAS Officer (2008 Batch) | 16 yrs exp. Indian Polity, Governance & GS for UPSC Prelims & Mains. Mock interview panelist.</p>
+          <div class="faculty-tags"><span>UPSC GS</span><span>Polity</span><span>Mock Interview</span></div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="faculty-card">
+        <div class="faculty-img-wrap">
+          <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=KavitaJoshi&backgroundColor=e8f5e9&hair=long04&eyes=variant08&skinColor=light" alt="Kavita Joshi" />
+        </div>
+        <div class="faculty-info">
+          <h3>Mrs. Kavita Joshi</h3>
+          <span class="faculty-subject"><i class="fas fa-globe-asia"></i> History & Geography</span>
+          <p>MA History, JNU Delhi | 11 yrs exp. Modern Indian History, World Geography & Environment for UPSC Mains.</p>
+          <div class="faculty-tags"><span>UPSC History</span><span>Geography</span><span>Environment</span></div>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="faculty-card">
+        <div class="faculty-img-wrap">
+          <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=DeepakPandey&backgroundColor=ffe0b2&hair=short05&eyes=variant09&skinColor=brown" alt="Deepak Pandey" />
+        </div>
+        <div class="faculty-info">
+          <h3>Mr. Deepak Pandey</h3>
+          <span class="faculty-subject"><i class="fas fa-chart-line"></i> Economics & CSAT</span>
+          <p>MA Economics, BHU Varanasi | 10 yrs exp. Indian Economy, Budget analysis & CSAT Reasoning for UPSC aspirants.</p>
+          <div class="faculty-tags"><span>UPSC Economy</span><span>CSAT</span><span>Current Affairs</span></div>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="faculty-card">
+        <div class="faculty-img-wrap">
+          <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=RekhaNair&backgroundColor=e1bee7&hair=long05&eyes=variant10&skinColor=light" alt="Rekha Nair" />
+        </div>
+        <div class="faculty-info">
+          <h3>Mrs. Rekha Nair</h3>
+          <span class="faculty-subject"><i class="fas fa-microscope"></i> Zoology & Botany</span>
+          <p>M.Sc Zoology, Kerala University | 9 yrs exp. NEET Biology co-faculty. Diagrams, NCERT MCQs & previous year paper specialist.</p>
+          <div class="faculty-tags"><span>NEET Biology</span><span>Zoology</span><span>Class 11–12</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-header">
+      <h2>What <span class="highlight">Students Say</span></h2>
+      <p>Real results from real students.</p>
+    </div>
+
+    <!-- Static reviews -->
+    <div class="testimonials-grid" id="staticReviews">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"I cleared JEE Mains with 97 percentile! The faculty here is absolutely amazing and always available for doubts."</p>
+        <div class="student">
+          <div class="avatar">R</div>
+          <div><strong>Rahul Sharma</strong><span>JEE Mains 2024 — 97 Percentile</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"BrightPath's NEET batch helped me score 680/720. The biology sessions were incredibly detailed and helpful."</p>
+        <div class="student">
+          <div class="avatar">P</div>
+          <div><strong>Priya Patel</strong><span>NEET 2024 — 680/720</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"My son went from 65% to 92% in just one year. The teachers are patient and the study material is top-notch."</p>
+        <div class="student">
+          <div class="avatar">M</div>
+          <div><strong>Mrs. Meena Gupta</strong><span>Parent — Class 10 Student</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- User submitted reviews -->
+    <div class="testimonials-grid" id="userReviewsContainer"></div>
+
+    <!-- Write a Review button -->
+    <div style="text-align:center; margin-top:2.5rem;">
+      <button class="btn-primary" id="openReviewModal"><i class="fas fa-pen"></i> Write a Review</button>
+    </div>
+  </section>
+
+  <!-- REVIEW MODAL -->
+  <div class="modal-overlay" id="reviewModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeReviewModal"><i class="fas fa-times"></i></button>
+      <h3>Share Your Review</h3>
+      <p class="modal-sub">Your experience helps other students!</p>
+      <form id="reviewForm">
+        <input type="text" id="reviewName" placeholder="Your Name" required />
+        <input type="text" id="reviewRole" placeholder="e.g. Student — JEE 2024 or Parent" required />
+        <div class="star-rating" id="starRating">
+          <span>Rating:</span>
+          <div class="stars-input">
+            <i class="fas fa-star" data-val="1"></i>
+            <i class="fas fa-star" data-val="2"></i>
+            <i class="fas fa-star" data-val="3"></i>
+            <i class="fas fa-star" data-val="4"></i>
+            <i class="fas fa-star" data-val="5"></i>
+          </div>
+        </div>
+        <textarea id="reviewText" placeholder="Write your review here..." rows="4" required></textarea>
+        <button type="submit" class="btn-primary" style="width:100%">Submit Review <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-header">
+      <h2>Get In <span class="highlight">Touch</span></h2>
+      <p>Book a free demo class or ask us anything — we'll get back to you within 24 hours.</p>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>123, Main Road, Near City Mall, Your City — 400001</span></div>
+        <div class="info-item"><i class="fas fa-phone"></i><span>+91 98765 43210</span></div>
+        <div class="info-item"><i class="fas fa-envelope"></i><span>info@brightpathcoaching.com</span></div>
+        <div class="info-item"><i class="fas fa-clock"></i><span>Mon–Sat: 7:00 AM – 9:00 PM</span></div>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required />
+          <input type="tel" placeholder="Phone Number" required />
+        </div>
+        <div class="form-row">
+          <input type="email" placeholder="Email Address" />
+          <select required>
+            <option value="" disabled selected>Select Course</option>
+            <option>JEE Preparation</option>
+            <option>NEET Preparation</option>
+            <option>Class 6–10 Foundation</option>
+            <option>UPSC Civil Services</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <textarea placeholder="Your message or query..." rows="4"></textarea>
+        <button type="submit" class="btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+        <p class="form-success" id="formSuccess">✅ Thank you! We'll contact you shortly.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <i class="fas fa-graduation-cap"></i> BrightPath Coaching
+        <p>Empowering students to achieve their dreams since 2016.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#features">Why Us</a>
+        <a href="#courses">Courses</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 BrightPath Coaching Center. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
