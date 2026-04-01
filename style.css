@@ -1351,6 +1351,12 @@ body.dark-mode .topper-card h4 { color: #e2e8f0; }
 body.dark-mode .topper-card p { color: #94a3b8; }
 body.dark-mode .topper-score { color: #94a3b8; }
 body.dark-mode .topper-card img { border-color: #334155; }
+body.dark-mode .toppers { background: #1e293b; }
+body.dark-mode .toppers-tabs { background: transparent; }
+body.dark-mode .tab-btn { background: #334155; color: #94a3b8; border: 1px solid #475569; }
+body.dark-mode .tab-btn.active,
+body.dark-mode .tab-btn:hover { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+body.dark-mode .topper-exam { color: #818cf8; }
 
 /* Testimonials */
 body.dark-mode .testimonial-card > p { color: #cbd5e1; }
