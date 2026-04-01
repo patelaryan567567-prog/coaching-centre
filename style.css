@@ -1315,6 +1315,88 @@ body.dark-mode .report-btn { color: #475569; }
 /* Footer */
 body.dark-mode .footer { background: #020617; }
 
+/* Hero text & stats */
+body.dark-mode .hero-content h1 { color: #e2e8f0; }
+body.dark-mode .hero-content p { color: #94a3b8; }
+body.dark-mode .hero-card p { color: #e2e8f0; }
+body.dark-mode .hero-card span { color: #94a3b8; }
+body.dark-mode .stat strong { color: #818cf8; }
+body.dark-mode .stat span { color: #94a3b8; }
+body.dark-mode .badge { background: #451a03; color: #fcd34d; }
+
+/* Section headers */
+body.dark-mode .section-header h2 { color: #e2e8f0; }
+body.dark-mode .section-header p { color: #94a3b8; }
+
+/* Navbar btn */
+body.dark-mode .btn-nav { background: #4f46e5; color: #fff !important; }
+
+/* Feature cards */
+body.dark-mode .feature-card h3 { color: #e2e8f0; }
+body.dark-mode .feature-card p { color: #94a3b8; }
+
+/* Course cards */
+body.dark-mode .course-card h3 { color: #e2e8f0; }
+body.dark-mode .course-card .course-desc { color: #94a3b8; }
+body.dark-mode .course-list li { color: #94a3b8; }
+body.dark-mode .course-card-inner { background: transparent; }
+
+/* Faculty */
+body.dark-mode .faculty-info h3 { color: #e2e8f0; }
+body.dark-mode .faculty-info p { color: #94a3b8; }
+body.dark-mode .faculty-img-wrap { border-color: #334155; }
+
+/* Toppers */
+body.dark-mode .topper-card h4 { color: #e2e8f0; }
+body.dark-mode .topper-card p { color: #94a3b8; }
+body.dark-mode .topper-score { color: #94a3b8; }
+body.dark-mode .topper-card img { border-color: #334155; }
+
+/* Testimonials */
+body.dark-mode .testimonial-card > p { color: #cbd5e1; }
+body.dark-mode .student strong { color: #e2e8f0; }
+body.dark-mode .student span { color: #94a3b8; }
+
+/* FAQ */
+body.dark-mode .faq-a { color: #94a3b8; }
+
+/* Calculator */
+body.dark-mode .calc-field label { color: #94a3b8; }
+body.dark-mode .cr-item span { color: #94a3b8; }
+body.dark-mode .calc-field select { background: #0f172a; border-color: #334155; color: #e2e8f0; }
+
+/* Contact */
+body.dark-mode .contact-info h3 { color: #e2e8f0; }
+body.dark-mode .info-item { color: #94a3b8; }
+body.dark-mode .info-item i { color: #818cf8; }
+body.dark-mode .map-wrap iframe { filter: invert(0.9) hue-rotate(180deg); }
+
+/* Footer text */
+body.dark-mode .footer-brand { color: #e2e8f0; }
+body.dark-mode .footer-brand p { color: #94a3b8; }
+body.dark-mode .footer-links a { color: #94a3b8; }
+body.dark-mode .footer-links a:hover { color: #e2e8f0; }
+body.dark-mode .footer-copy { color: #64748b; }
+
+/* Course detail page extra */
+body.dark-mode .cp-timing-card h4 { color: #e2e8f0; }
+body.dark-mode .cp-timing-card p { color: #94a3b8; }
+body.dark-mode .cp-includes li { color: #94a3b8; }
+body.dark-mode .cp-fac-desc { color: #94a3b8; }
+body.dark-mode .cp-fac-qual { color: #94a3b8; }
+body.dark-mode .cp-stat span { color: #94a3b8; }
+body.dark-mode .cp-stat strong { color: #e2e8f0; }
+body.dark-mode .cp-back { color: #818cf8; }
+body.dark-mode .cp-brand { color: #818cf8; }
+
+/* Modal */
+body.dark-mode .modal-box h3 { color: #e2e8f0; }
+body.dark-mode .modal-sub { color: #94a3b8; }
+body.dark-mode .star-rating span { color: #94a3b8; }
+
+/* Back to top */
+body.dark-mode .back-to-top { background: #4f46e5; }
+
 /* ── TOPPERS ── */
 .toppers { background: var(--white); }
 
