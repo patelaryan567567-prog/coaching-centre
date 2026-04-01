@@ -790,6 +790,10 @@ section { padding: 5rem 6%; }
   padding: 1.6rem;
   align-items: flex-start;
   transition: transform 0.2s, box-shadow 0.2s;
+  border-left: 4px solid #4f46e5;
+  border-top: 1px solid rgba(79,70,229,0.15);
+  border-right: 1px solid rgba(79,70,229,0.15);
+  border-bottom: 1px solid rgba(79,70,229,0.15);
 }
 
 .faculty-card:hover {
@@ -1442,6 +1446,10 @@ body.dark-mode .back-to-top { background: #4f46e5; }
   position: relative;
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: var(--card-shadow);
+  border-left: 4px solid #f59e0b;
+  border-top: 1px solid rgba(245,158,11,0.2);
+  border-right: 1px solid rgba(245,158,11,0.2);
+  border-bottom: 1px solid rgba(245,158,11,0.2);
 }
 .topper-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(79,70,229,0.13); }
 .topper-card.hidden { display: none; }
