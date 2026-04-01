@@ -1140,18 +1140,93 @@ body.dark-mode {
   --white: #1e293b;
   --card-shadow: 0 4px 24px rgba(0,0,0,0.3);
 }
-body.dark-mode .navbar { background: #1e293b; }
+
+/* Navbar & ticker */
+body.dark-mode .navbar { background: #1e293b; box-shadow: 0 2px 12px rgba(0,0,0,0.3); }
 body.dark-mode .ticker-wrap { background: #3730a3; }
+body.dark-mode .ticker-label { background: #312e81; }
 body.dark-mode .dark-toggle { background: #334155; color: #fbbf24; }
 body.dark-mode .hamburger { background: #334155; color: #e2e8f0; }
+
+/* Dropdown menu */
 body.dark-mode .nav-dropdown { background: #1e293b; }
 body.dark-mode .nav-dropdown ul li a { color: #e2e8f0; }
 body.dark-mode .nav-dropdown ul li a:hover { background: #334155; }
 body.dark-mode .dropdown-close { background: #334155; color: #94a3b8; }
-body.dark-mode .nav-links a { color: #e2e8f0; }
-body.dark-mode .feature-card,
-body.dark-mode .topper-card,
-body.dark-mode .faq-item { background: #1e293b; }
+
+/* Hero */
+body.dark-mode .hero { background: linear-gradient(135deg, #1e1b4b 0%, #0f2d1f 100%); }
+body.dark-mode .hero-card { background: #1e293b; }
+body.dark-mode .badge { background: #451a03; color: #fcd34d; }
+
+/* Sections with white bg */
+body.dark-mode .features,
+body.dark-mode .toppers,
+body.dark-mode .testimonials,
+body.dark-mode .faq,
+body.dark-mode .contact { background: #1e293b; }
+
+/* Sections with bg color */
+body.dark-mode .courses,
+body.dark-mode .faculty,
+body.dark-mode .calculator { background: #0f172a; }
+
+/* Cards */
+body.dark-mode .feature-card { background: #0f172a; }
+body.dark-mode .feature-card .icon { background: #1e3a5f; }
+body.dark-mode .course-card { background: #1e293b; }
+body.dark-mode .course-card.featured { background: #1e1b4b; border-color: #6366f1; }
+body.dark-mode .course-icon { background: #1e3a5f; }
+body.dark-mode .btn-details { background: #334155; color: #a5b4fc; }
+body.dark-mode .btn-details:hover { background: #475569; }
+body.dark-mode .meta-item { background: #0f172a; }
+body.dark-mode .faculty-card { background: #1e293b; }
+body.dark-mode .faculty-subject { background: #1e3a5f; }
+body.dark-mode .faculty-tags span { background: #334155; color: #e2e8f0; }
+body.dark-mode .topper-card { background: #0f172a; }
+body.dark-mode .testimonial-card { background: #0f172a; }
+body.dark-mode .faq-item { background: #0f172a; }
+body.dark-mode .faq-q { color: #e2e8f0; }
+body.dark-mode .tab-btn { background: #334155; color: #94a3b8; }
+
+/* Course detail page */
+body.dark-mode .course-page { background: #0f172a; }
+body.dark-mode .cp-navbar { background: #1e293b; border-bottom-color: #334155; }
+body.dark-mode .cp-section { background: #1e293b; }
+body.dark-mode .cp-section-title { border-bottom-color: #334155; color: #e2e8f0; }
+body.dark-mode .cp-stat { background: #1e293b; }
+body.dark-mode .cp-timing-card { background: #0f172a; }
+body.dark-mode .cp-faculty-card { background: #0f172a; }
+body.dark-mode .cp-faculty-card strong { color: #e2e8f0; }
+body.dark-mode .cp-info-item { background: #0f172a; }
+body.dark-mode .cp-info-item strong { color: #e2e8f0; }
+body.dark-mode .cp-price-card { border-color: #334155; background: #0f172a; }
+body.dark-mode .cp-price-card span { color: #94a3b8; }
+body.dark-mode .cp-price-card em { color: #94a3b8; }
+body.dark-mode .cp-cta { background: linear-gradient(135deg, #1e1b4b, #0f2d1f); }
+body.dark-mode .cp-cta p { color: #94a3b8; }
+
+/* Calculator */
+body.dark-mode .calc-box { background: #1e293b; }
+body.dark-mode .calc-field select { background: #0f172a; border-color: #334155; color: #e2e8f0; }
+body.dark-mode .cr-item { background: #0f172a; }
+body.dark-mode .cr-item strong { color: #e2e8f0; }
+
+/* Contact & forms */
+body.dark-mode .contact-form { background: #0f172a; }
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form select,
+body.dark-mode .contact-form textarea { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+body.dark-mode .social-links a { background: #1e3a5f; }
+
+/* Review modal */
+body.dark-mode .modal-box { background: #1e293b; }
+body.dark-mode .modal-close { background: #334155; color: #94a3b8; }
+body.dark-mode #reviewForm input,
+body.dark-mode #reviewForm textarea { background: #0f172a; border-color: #334155; color: #e2e8f0; }
+body.dark-mode .report-btn { color: #475569; }
+
+/* Footer */
 body.dark-mode .footer { background: #020617; }
 
 /* ── TOPPERS ── */
